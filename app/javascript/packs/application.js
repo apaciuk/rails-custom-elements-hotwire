@@ -35,7 +35,7 @@ import "controllers"
 class WordCount extends HTMLElement {
   constructor() {
       super();
-      const parent = this.parentNode 
+      const parent = this.parentElement
       console.log(parent)
       const shadow = this.attachShadow({mode: 'open'})
       const text = document.createElement('span')
