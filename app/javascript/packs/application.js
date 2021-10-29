@@ -31,3 +31,17 @@ document.addEventListener("turbo:load", () => {
 
 
 import "controllers"
+// Custom Wordcount Element
+class WordCount extends HTMLElement {
+  constructor() {
+      super();
+      const parent = this.parentNode 
+      console.log(parent)
+      const shadow = this.attachShadow({mode: 'open'})
+      const text = document.createElement('span')
+      text.textContent = "Hello Element!"
+      shadow.appendChild(text)
+  }
+}
+
+customElements.define("word-count", WordCount)
